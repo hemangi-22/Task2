@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio Website</title>
+    <!-- Custom CSS link -->
+   
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">    
+</head>
+<style>
+    /* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding *
+}
+.about-me-heading {
+  position: absolute; /* Set the heading to absolute position */
+  top: 10px; /* Adjust the distance from the top */
+  left: 10px; /* Adjust the distance from the left */
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.navilist {
+    list-style: none;
+    display: flex;
+}
+
+.navilist li {
+    margin-right: 1rem;
+}
+
+.navilist li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 0%;
+    transition: color 0.3s ease;
+}
+
+.navilist li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section Styles */
+/* Hero Section Styles */
+.hero {
+    background-image: url('black-wallpapers-28.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-left: 2rem; /* Adjust this value to position the content */
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+.web-developer {
+    color: #d5269b; /* Set the text color to red (#ff4081) */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    color: #25c3ae; /* Change the text color to a different color*/
+    animation: pulsate 2s ease-in-out infinite;
+}
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* About Me Section Styles */
+/* About Me Section Styles */
+/* About Me Section Styles */
+.about-section {
+    padding: 4rem 0;
+    text-align: left;
+    background-color: #1c1b1b; /* Add a black background */
+    color: #fff; /* Set the text color to white for better visibility */
+
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-content img {
+    width: 400px;
+    height: 400px; /* Set the height and width to create a square shape */
+    margin-right: 2rem; /* Adjust the margin to position the image to the left */
+}
+
+.about-paragraph {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-paragraph p {
+    margin-bottom: 1rem;
+}
+
+
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #060606;
+    color: #fff;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+    transform: translateY(20px);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.skills-list:hover .skill {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.skill1:hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.skill2:hover {
+    transform: translateX(-20px) rotate(3deg);
+    opacity: 1;
+}
+
+.skill3:hover {
+    transform: translateX(20px) rotate(-3deg);
+    opacity: 1;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Projects Section Styles */
+.portfolio-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set the text color to white */
+}
+
+.portfolio-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Add styles for the highlighted text */
+.highlighted {
+    color: #ff4081; /* Set the text color to red (#ff4081) or any other color you prefer */
+    font-weight: bold;
+}
+#support-system:hover {
+    color: #1ed414; /* Change the text color on hover to #a9cc0a */
+}
+/* Add styles for the white underline */
+.white-underline {
+    position: relative;
+}
+
+/* Add the white underline using ::after pseudo-element */
+.white-underline::after {
+    content: ''; /* Add content to the pseudo-element */
+    position: absolute;
+    bottom: -5px; /* Adjust the value to position the underline relative to the text */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Set the color of the underline to white */
+}
+
+
+.project {
+    flex: 1 1 45%; /* Adjust the width of each project container */
+    margin: 1rem;
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .project h3 {
+    margin: 1rem 0;
+  }
+  
+  .project p {
+    margin-bottom: 1rem;
+  }
+  
+  /* To place the first image on the right side and the second image on the left side */
+  .project-left {
+    order: 2;
+  }
+  
+  .project-right {
+    order: 1;
+  }
+  
+/* Resume Section Styles */
+.resume-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.resume-section p {
+    margin-bottom: 1rem;
+}
+
+.resume-section a {
+    color: #e0a951;
+    background-color: #fbf7f7;
+    color: #101010;
+
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fefefe;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #db85d6;
+    margin: 0 0.5rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navilist {
+        flex-direction: column;
+    }
+    .navilist li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+</style>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Hemangi</a>
+      
+        <ul class="navilist">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>   
+            <li><a href="#skills">Skills</a></li>  
+            <li><a href="#portfolio">Portfolio</a></li>  
+            <li><a href="#contact">Contact</a></li>  
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Hemangi </h1>
+            <h3>And I'm <span class="web-developer">Web Developer</span></h3>
+            <p>I am a passionate web developer with expertise in front-end development and responsive design. My goal is to create user-friendly and visually appealing websites. Explore my projects to see examples of my work and feel free to get in touch for collaboration opportunities.</p>
+            <a href="#portfolio" class="btn">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h1 class="about-mefa-pull-left">About Me</h1>
+            <img src="hemangi.jpg" alt="Hemangi">
+            <div class="about-paragraph">
+                <p>Hello, I'm Hemangi, a dedicated and creative web developer with a strong background in computer 
+                science and information technology. Throughout my journey, I've honed my skills in HTML, CSS, JavaScript, and 
+                various front-end frameworks to craft visually stunning and responsive websites. Additionally, I have extensive 
+                experience in Java, allowing me to build robust and scalable web applications with complex functionalities.
+                My love for problem-solving and curiosity drives me to continuously expand my knowledge in the ever-evolving field of web 
+                development and Java programming. I take pride in delivering high-quality, user-centric websites and Java-based 
+                applications, leveraging my proficiency in handling databases and implementing algorithms for optimal performance. With strong communication and project management abilities, 
+                I thrive in dynamic environments, collaborating with teams to bring innovative ideas to life. Eager to embrace new challenges and cutting-edge technologies, 
+                I strive to make a positive impact in the digital world by creating seamless and intuitive web solutions. I'm excited about contributing my expertise in both
+                web development and Java programming to meaningful projects and welcome the opportunity to discuss collaboration possibilities.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Skills Section -->
+  <!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill">
+            <img src="webdev.png" alt="Skill Icon 1" class="skill-icon">
+            <h3 class="skill-title">Web Development</h3>
+           
+        </div>
+
+        <div class="skill">
+            <img src="frontin.png" alt="Skill Icon 2" class="skill-icon">
+            <h3 class="skill-title">Front-end Development</h3>
+            
+        </div>
+
+        <div class="skill">
+            <img src="java.png" alt="Skill Icon 3" class="skill-icon">
+            <h3 class="skill-title">Java-Script</h3>
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-list">
+            <!-- Add your portfolio projects here -->
+            <div class="project projectfa-pull-left">
+                
+                <img src="coollogo_com-293711656.png" alt="Project 1">
+                <h3 class="highlighted">Project 1</h3>
+                <h3 class="white-underline" id="support-system">NGO Management System</h3>
+                <p>
+
+                    "Our NGO project aims to provide quality education and healthcare services to underprivileged communities in rural areas. Through collaborative efforts with local volunteers and partner organizations, we strive to create sustainable solutions that empower individuals and improve their overall well-being. By focusing on education, healthcare, and community development, we aspire to create a positive impact and foster long-term positive change in the lives of the people we serve."</p>
+            </div>
+            <div class="project projectfa-pull-right">
+                <img src="game.jpg" alt="Project 2">
+                <h3 class="highlighted">Project 2</h3>
+                <h3 class="white-underline" id="support-system">Student Support System</h3>
+                <p>Our Student Support System is an innovative platform designed to enhance the overall learning experience for students. It provides comprehensive support and resources to help students succeed academically, emotionally, and socially. The system includes features such as personalized academic assistance, access to educational materials, interactive study groups, and counseling services. Through collaboration with educators and experts, the platform aims to identify and address students' unique needs, fostering a positive and inclusive learning environment. </p>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <h2>Resume</h2>
+        <p>Download my resume in PDF format: <a href="https://resume.io/r/hF9sRwHLZ" target="_blank">Resume.pdf</a></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: ransinghemangi@gmail.com</p>
+            <p>Phone: 1234567839</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Hemangi. All rights reserved.</p>
+        <!-- Add social media icons/links here -->
+        <div class="social-icons">
+            <a href="#" class="bx bxl-linkedin"></a>
+            <a href="#" class="bx bxl-github"></a>
+            <!-- Add more social media icons here -->
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
